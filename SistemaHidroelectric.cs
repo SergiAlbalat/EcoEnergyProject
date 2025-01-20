@@ -1,11 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace EcoEnergyProject
 {
-    public class SistemaHidroelectric : SistemaEnergia
+    public class SistemaHidroelectric : SistemaEnergia, ICalculEnergia
     {
+        public double CabalAigua {  get; set; }
+        public SistemaHidroelectric(double cabalAigua)
+        {
+            if (CheckParameter())
+            {
+                Type = "Sistema Hidroelectric";
+                CabalAigua = cabalAigua;
+                Energy = CalculateEnergy();
+                Date = DateTime.Now;
+            }
+        }
+        public bool CheckParameter() => CabalAigua > 20;
+        public double CalculateEnergy() => CabalAigua * 9.8 * 0.8;
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Tipus de Energia\tCabal d'Aigua:\tEnergia Generada:\tData:\n{Type}\t{CabalAigua}m3\t{Energy}Kb\t{Date}");
+        }
     }
 }
