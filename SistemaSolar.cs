@@ -3,20 +3,22 @@ namespace EcoEnergyProject
 {
     public class SistemaSolar : SistemaEnergia, ICalculEnergia
     {
+        public double HoresDeSol {  get; set; }
         public SistemaSolar(double horesDeSol)
         {
-            if(CheckParameter(horesDeSol))
+            if(CheckParameter())
             {
                 Type = "Sistema Solar";
-                Energy = CalculateEnergy(horesDeSol);
+                HoresDeSol = horesDeSol;
+                Energy = CalculateEnergy();
                 Date = DateTime.Now;
             }
         }
-        public bool CheckParameter(double horesDeSol) => horesDeSol > 1;
-        public double CalculateEnergy(double horesDeSol) => horesDeSol * 1.5;
+        public bool CheckParameter() => HoresDeSol > 1;
+        public double CalculateEnergy() => HoresDeSol * 1.5;
         public void ShowInfo()
         {
-            Console.WriteLine($"Tipus de Energia\tEnergia Generada:\tData:\n{Type}\t{Energy}\t{Date}");
+            Console.WriteLine($"Tipus de Energia\tHores de Sol:\tEnergia Generada:\tData:\n{Type}\t{HoresDeSol}\t{Energy}Kb\t{Date}");
         }
     }
 }
