@@ -6,15 +6,18 @@ namespace EcoEnergyProject
         public double HoresDeSol {  get; set; }
         public SistemaSolar(double horesDeSol)
         {
-            if(CheckParameter())
+            if(CheckParameter(horesDeSol))
             {
-                Type = "Sistema Solar";
-                HoresDeSol = horesDeSol;
-                Energy = CalculateEnergy();
-                Date = DateTime.Now;
+                throw new ArgumentOutOfRangeException();
             }
+            Type = "Sistema Solar";
+            HoresDeSol = horesDeSol;
+            Energy = CalculateEnergy();
+            Date = DateTime.Now;
+            SimulationCount++;
         }
-        public bool CheckParameter() => HoresDeSol > 1;
+        public SistemaSolar() : this(DefaultParameter) { }
+        public bool CheckParameter(double horesDeSol) => horesDeSol > 1;
         public double CalculateEnergy() => HoresDeSol * 1.5;
         public void ShowInfo()
         {
