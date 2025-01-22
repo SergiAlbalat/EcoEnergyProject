@@ -10,22 +10,22 @@ namespace EcoEnergyProject
         public double VelocitatVent { get; set; }
         public SistemaEolic(double velocitatVent)
         {
-            if (!CheckParameter(velocitatVent))
+            if (!ComprovarParametre(velocitatVent))
             {
                 throw new ArgumentOutOfRangeException();
             }
-            Type = "Sistema Eolic";
+            Tipus = "Sistema Eolic";
             VelocitatVent = velocitatVent;
-            Energy = CalculateEnergy();
-            Date = DateTime.Now;
-            SimulationCount++;
+            Energia = CalcularEnergia();
+            Data = DateTime.Now;
+            ContadorSimulacions++;
         }
-        public SistemaEolic() : this(DefaultParameter) { }
-        public bool CheckParameter(double velocitatVent) => velocitatVent > 5;
-        public double CalculateEnergy() => Math.Pow(VelocitatVent,3)*0.2;
-        public void ShowInfo()
+        public SistemaEolic() : this(ParametrePerDefecte) { }
+        public bool ComprovarParametre(double velocitatVent) => velocitatVent > 5;
+        public double CalcularEnergia() => Math.Pow(VelocitatVent,3)*0.2;
+        public void MostrarInformacio()
         {
-            Console.WriteLine($"Tipus de Energia\tVelocitat del vent:\tEnergia Generada:\tData:\n{Type}\t{VelocitatVent}m/s\t{Energy}Kb\t{Date}");
+            Console.WriteLine($"Tipus de Energia\tVelocitat del vent:\tEnergia Generada:\tData:\n{Tipus}\t{VelocitatVent}m/s\t{Energia}Kb\t{Data}");
         }
     }
 }

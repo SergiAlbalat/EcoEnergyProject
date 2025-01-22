@@ -3,10 +3,10 @@ namespace EcoEnergyProject
 {
     public abstract class SistemaEnergia
     {
-        protected string Type { get; set; }
-        protected double Energy { get; set; }
-        protected DateTime Date { get; set; }
-        protected static int SimulationCount = 0;
-        protected static double DefaultParameter = 20.0d;
+        protected string Tipus { get; set; }
+        protected double Energia { get; set; }
+        protected DateTime Data { get; set; }
+        protected static int ContadorSimulacions = 0;
+        protected static double ParametrePerDefecte = 20.0d;
     }
 }
