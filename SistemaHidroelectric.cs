@@ -6,22 +6,22 @@ namespace EcoEnergyProject
         public double CabalAigua {  get; set; }
         public SistemaHidroelectric(double cabalAigua)
         {
-            if (CheckParameter(cabalAigua))
+            if (ComprovarParametre(cabalAigua))
             {
                 throw new ArgumentOutOfRangeException();
             }
-            Type = "Sistema Hidroelectric";
+            Tipus = "Sistema Hidroelectric";
             CabalAigua = cabalAigua;
-            Energy = CalculateEnergy();
-            Date = DateTime.Now;
-            SimulationCount++;
+            Energia = CalcularEnergia();
+            Data = DateTime.Now;
+            ContadorSimulacions++;
         }
-        public SistemaHidroelectric() : this(DefaultParameter) { }
-        public bool CheckParameter(double cabalAigua) => cabalAigua > 20;
-        public double CalculateEnergy() => CabalAigua * 9.8 * 0.8;
-        public void ShowInfo()
+        public SistemaHidroelectric() : this(ParametrePerDefecte) { }
+        public bool ComprovarParametre(double cabalAigua) => cabalAigua > 20;
+        public double CalcularEnergia() => CabalAigua * 9.8 * 0.8;
+        public void MostrarInformacio()
         {
-            Console.WriteLine($"Tipus de Energia\tCabal d'Aigua:\tEnergia Generada:\tData:\n{Type}\t{CabalAigua}m3\t{Energy}Kb\t{Date}");
+            Console.WriteLine($"Tipus de Energia\tCabal d'Aigua:\tEnergia Generada:\tData:\n{Tipus}\t{CabalAigua}m3\t{Energia}Kb\t{Data}");
         }
     }
 }

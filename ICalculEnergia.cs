@@ -3,8 +3,8 @@ namespace EcoEnergyProject
 {
     public interface ICalculEnergia
     {
-        bool CheckParameter(double argument);
-        double CalculateEnergy();
-        void ShowInfo();
+        bool ComprovarParametre(double argument);
+        double CalcularEnergia();
+        void MostrarInformacio();
     }
 }
