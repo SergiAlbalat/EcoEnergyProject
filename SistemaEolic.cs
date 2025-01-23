@@ -12,9 +12,9 @@ namespace EcoEnergyProject
         {
             if (!ComprovarParametre(velocitatVent))
             {
-                throw new ArgumentOutOfRangeException();
+                throw new ArgumentOutOfRangeException(ErrorForaRang);
             }
-            Tipus = "Sistema Eolic";
+            Tipus = "Eolic";
             VelocitatVent = velocitatVent;
             Energia = CalcularEnergia();
             Data = DateTime.Now;
@@ -22,7 +22,7 @@ namespace EcoEnergyProject
         }
         public SistemaEolic() : this(ParametrePerDefecte) { }
         public bool ComprovarParametre(double velocitatVent) => velocitatVent > 5;
-        public double CalcularEnergia() => Math.Pow(VelocitatVent,3)*0.2;
+        public double CalcularEnergia() => Math.Round(Math.Pow(VelocitatVent,3)*0.2,4);
         public void MostrarInformacio()
         {
             Console.WriteLine($"Tipus de Energia\tVelocitat del vent:\tEnergia Generada:\tData:\n{Tipus}\t{VelocitatVent}m/s\t{Energia}Kb\t{Data}");

@@ -14,7 +14,7 @@ namespace EcoEnergyProject
         public static void ImprimirMenuObjecte()
         {
             const string MsgTipusEnergia = "Simulació numero {0}:\nQuin tipus d'energia utilitzara la simulació:\n1- Energia Solar\n2- Energia Eolica\n3- Energia Hidroelectrica";
-            Console.WriteLine(MsgTipusEnergia);
+            Console.WriteLine(MsgTipusEnergia, SistemaEnergia.ContadorSimulacions+1);
         }
 
         public static void ImprimirMenuParametres(int tipus)
@@ -36,7 +36,7 @@ namespace EcoEnergyProject
             }
         }
 
-        public static object CrearSimulacio(int tipus, double argument)
+        public static SistemaEnergia CrearSimulacio(int tipus, double argument)
         {
             switch (tipus)
             {
@@ -53,7 +53,7 @@ namespace EcoEnergyProject
 
         public static int IntroduirNum()
         {
-            const string MissatgeError = "Opció no vàlida. Si us plau, torna-ho a intentar.";
+            const string MissatgeError = "Opció no vàlida.";
 
             if (!int.TryParse(Console.ReadLine(), out int opcio))
             {

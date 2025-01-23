@@ -3,38 +3,38 @@
   <Class Name="EcoEnergyProject.SistemaEnergia">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAQAEAAAAAAAAAACBAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABgQEAAAAAIAAAAAAAAAAAAgABCAAgAAAAAAAAA=</HashCode>
       <FileName>SistemaEnergia.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EcoEnergyProject.SistemaSolar">
-    <Position X="3.75" Y="3" Width="1.5" />
+    <Position X="3.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAACAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ECEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SistemaSolar.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="EcoEnergyProject.SistemaEolic">
-    <Position X="6.25" Y="3" Width="1.5" />
+    <Position X="6.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAgABAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAEAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SistemaEolic.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Left" Position="0.144" />
   </Class>
   <Class Name="EcoEnergyProject.SistemaHidroelectric">
-    <Position X="8.75" Y="3" Width="1.5" />
+    <Position X="8.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAABAAAAAAAAAgAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>EAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>SistemaHidroelectric.cs</FileName>
     </TypeIdentifier>
     <Lollipop Orientation="Left" Position="0.185" />
   </Class>
   <Interface Name="EcoEnergyProject.ICalculEnergia">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="8.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICalculEnergia.cs</FileName>
     </TypeIdentifier>
   </Interface>
