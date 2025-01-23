@@ -3,7 +3,6 @@ namespace EcoEnergyProject
 {
     public static class MyMethods
     {
-
         /// <summary>
         /// Imprimeix el menu principal
         /// </summary>
@@ -21,7 +20,7 @@ namespace EcoEnergyProject
         public static void ImprimirMenuObjecte()
         {
             const string MsgTipusEnergia = "Simulació numero {0}:\nQuin tipus d'energia utilitzara la simulació:\n1- Energia Solar\n2- Energia Eolica\n3- Energia Hidroelectrica";
-            Console.WriteLine(MsgTipusEnergia, SistemaEnergia.ContadorSimulacions+1);
+            Console.WriteLine(MsgTipusEnergia, SistemaEnergia.GetContador() +1);
         }
 
         /// <summary>
@@ -55,6 +54,7 @@ namespace EcoEnergyProject
         /// <returns>Instancia de la clase corresponent</returns>
         public static SistemaEnergia CrearSimulacio(int tipus, double argument)
         {
+            const string MsgErrorForaRang = "El tipus seleccionat es troba fora de rang";
             switch (tipus)
             {
                 case 1:
@@ -64,7 +64,7 @@ namespace EcoEnergyProject
                 case 3:
                     return new SistemaHidroelectric(argument);
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(MsgErrorForaRang);
             }
         }
 
