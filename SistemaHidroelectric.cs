@@ -4,6 +4,11 @@ namespace EcoEnergyProject
     public class SistemaHidroelectric : SistemaEnergia, ICalculEnergia
     {
         public double CabalAigua {  get; set; }
+
+        /// <summary>
+        /// Crea una instancia de Sistema Hidroelectric
+        /// </summary>
+        /// <param name="cabalAigua">Metres cubics d'aigua que pasen per la maquina.</param>
         public SistemaHidroelectric(double cabalAigua)
         {
             if (!ComprovarParametre(cabalAigua))
@@ -17,7 +22,7 @@ namespace EcoEnergyProject
             ContadorSimulacions++;
         }
         public SistemaHidroelectric() : this(ParametrePerDefecte) { }
-        public bool ComprovarParametre(double cabalAigua) => cabalAigua > 20;
+        public bool ComprovarParametre(double argument) => argument > 20;
         public double CalcularEnergia() => Math.Round(CabalAigua * 9.8 * 0.8,4);
         public void MostrarInformacio()
         {

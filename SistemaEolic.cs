@@ -8,6 +8,11 @@ namespace EcoEnergyProject
     public class SistemaEolic : SistemaEnergia, ICalculEnergia
     {
         public double VelocitatVent { get; set; }
+
+        /// <summary>
+        /// Crea una instancia de Sistema Eolic
+        /// </summary>
+        /// <param name="velocitatVent">Velocitat en m/s del vent que passa per la maquina</param>
         public SistemaEolic(double velocitatVent)
         {
             if (!ComprovarParametre(velocitatVent))
@@ -21,7 +26,7 @@ namespace EcoEnergyProject
             ContadorSimulacions++;
         }
         public SistemaEolic() : this(ParametrePerDefecte) { }
-        public bool ComprovarParametre(double velocitatVent) => velocitatVent > 5;
+        public bool ComprovarParametre(double argument) => argument > 5;
         public double CalcularEnergia() => Math.Round(Math.Pow(VelocitatVent,3)*0.2,4);
         public void MostrarInformacio()
         {

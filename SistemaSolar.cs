@@ -4,6 +4,11 @@ namespace EcoEnergyProject
     public class SistemaSolar : SistemaEnergia, ICalculEnergia
     {
         public double HoresDeSol {  get; set; }
+
+        /// <summary>
+        /// Crea una instancia de Sistema Solar
+        /// </summary>
+        /// <param name="horesDeSol">Hores durant les que el sol envia llum a la maquina</param>
         public SistemaSolar(double horesDeSol)
         {
             if(!ComprovarParametre(horesDeSol))
@@ -17,7 +22,7 @@ namespace EcoEnergyProject
             ContadorSimulacions++;
         }
         public SistemaSolar() : this(ParametrePerDefecte) { }
-        public bool ComprovarParametre(double horesDeSol) => horesDeSol >= 1;
+        public bool ComprovarParametre(double argument) => argument >= 1;
         public double CalcularEnergia() => Math.Round(HoresDeSol * 1.5,4);
         public void MostrarInformacio()
         {

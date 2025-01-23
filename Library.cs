@@ -1,8 +1,12 @@
 ﻿using System;
 namespace EcoEnergyProject
 {
-    public class MyMethods
+    public static class MyMethods
     {
+
+        /// <summary>
+        /// Imprimeix el menu principal
+        /// </summary>
         public static void ImprimirMenu()
         {
             const string Title = "### ###   ## ##    ## ##            ### ###  ###  ##  ### ###  ### ##    ## ##   ##  ##   \r\n ##  ##  ##   ##  ##   ##            ##  ##    ## ##   ##  ##   ##  ##  ##   ##  ##  ##   \r\n ##      ##       ##   ##            ##       # ## #   ##       ##  ##  ##       ##  ##   \r\n ## ##   ##       ##   ##            ## ##    ## ##    ## ##    ## ##   ##  ###   ## ##   \r\n ##      ##       ##   ##            ##       ##  ##   ##       ## ##   ##   ##    ##     \r\n ##  ##  ##   ##  ##   ##            ##  ##   ##  ##   ##  ##   ##  ##  ##   ##    ##     \r\n### ###   ## ##    ## ##            ### ###  ###  ##  ### ###  #### ##   ## ##     ##     \r\n                                                                                          \r\n";
@@ -11,12 +15,19 @@ namespace EcoEnergyProject
             Console.WriteLine(Options);
         }
 
+        /// <summary>
+        /// Imprimeix el menu per seleccionar el tipus de simulació
+        /// </summary>
         public static void ImprimirMenuObjecte()
         {
             const string MsgTipusEnergia = "Simulació numero {0}:\nQuin tipus d'energia utilitzara la simulació:\n1- Energia Solar\n2- Energia Eolica\n3- Energia Hidroelectrica";
             Console.WriteLine(MsgTipusEnergia, SistemaEnergia.ContadorSimulacions+1);
         }
 
+        /// <summary>
+        /// Imprimeix el menu per introduir el parametre corresponent depenent del tipus
+        /// </summary>
+        /// <param name="tipus">Tipus de simulació</param>
         public static void ImprimirMenuParametres(int tipus)
         {
             const string MsgParametreSolar = "Quantes hores al dia li donarà el sol? Valor minim 1 hora";
@@ -36,6 +47,12 @@ namespace EcoEnergyProject
             }
         }
 
+        /// <summary>
+        /// Crear la simulació del tipus corresponent
+        /// </summary>
+        /// <param name="tipus">Tipus de simulació</param>
+        /// <param name="argument">Argument utilitzat pel constructor</param>
+        /// <returns>Instancia de la clase corresponent</returns>
         public static SistemaEnergia CrearSimulacio(int tipus, double argument)
         {
             switch (tipus)
@@ -51,6 +68,10 @@ namespace EcoEnergyProject
             }
         }
 
+        /// <summary>
+        /// Valida que el valor introduit sigui un número
+        /// </summary>
+        /// <returns>El número validad</returns>
         public static int IntroduirNum()
         {
             const string MissatgeError = "Opció no vàlida.";
@@ -62,6 +83,13 @@ namespace EcoEnergyProject
             return opcio;
         }
 
+        /// <summary>
+        /// Comprova que el número estigui dins del rang determinat
+        /// </summary>
+        /// <param name="num">Número a comprovar.</param>
+        /// <param name="min">Minim del rang</param>
+        /// <param name="max">Maxim del rang</param>
+        /// <returns>Boolea que confirma si esta dins del rang</returns>
         public static bool NumDinsRang(int num, int min, int max)
         {
             return num >= min && num <= max;
