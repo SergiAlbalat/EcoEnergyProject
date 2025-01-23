@@ -22,7 +22,7 @@ namespace EcoEnergyProject
             ContadorSimulacions++;
         }
         public SistemaSolar() : this(ParametrePerDefecte) { }
-        public bool ComprovarParametre(double argument) => argument >= 1;
+        public bool ComprovarParametre(double argument) => argument > 1;
         public double CalcularEnergia() => Math.Round(HoresDeSol * 1.5,4);
         public void MostrarInformacio()
         {
