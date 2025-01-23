@@ -22,7 +22,7 @@ namespace EcoEnergyProject
             ContadorSimulacions++;
         }
         public SistemaHidroelectric() : this(ParametrePerDefecte) { }
-        public bool ComprovarParametre(double argument) => argument > 20;
+        public bool ComprovarParametre(double argument) => argument >= 20;
         public double CalcularEnergia() => Math.Round(CabalAigua * 9.8 * 0.8,4);
         public void MostrarInformacio()
         {
