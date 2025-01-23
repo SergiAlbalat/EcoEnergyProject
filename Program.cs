@@ -1,7 +1,7 @@
 ﻿using System;
 namespace EcoEnergyProject
 {
-    public class Program
+    public static class Program
     {
         public static void Main()
         {
@@ -27,7 +27,7 @@ namespace EcoEnergyProject
                         case 1:
                             Console.WriteLine(MsgNumeroSim);
                             int numeroSimulacions = MyMethods.IntroduirNum();
-                            if (SistemaEnergia.ContadorSimulacions + numeroSimulacions >= llistaSimulacions.Length)
+                            if (SistemaEnergia.GetContador() + numeroSimulacions >= llistaSimulacions.Length)
                             {
                                 Console.WriteLine(MsgMidaMaxima);
                             }
@@ -44,7 +44,7 @@ namespace EcoEnergyProject
                                     } while (!MyMethods.NumDinsRang(tipus, MinTipus, MaxTipus));
                                     MyMethods.ImprimirMenuParametres(tipus);
                                     parametre = MyMethods.IntroduirNum();
-                                    llistaSimulacions[SistemaEnergia.ContadorSimulacions] = MyMethods.CrearSimulacio(tipus, parametre);
+                                    llistaSimulacions[SistemaEnergia.GetContador()] = MyMethods.CrearSimulacio(tipus, parametre);
                                     Console.WriteLine(MsgCreacioCorrecte);
                                 }
                             }
@@ -53,7 +53,7 @@ namespace EcoEnergyProject
                         case 2:
 
                             Console.WriteLine(MsgInfoTaula);
-                            for (int i = 0; i < SistemaEnergia.ContadorSimulacions; i++)
+                            for (int i = 0; i < SistemaEnergia.GetContador(); i++)
                             {
                                 Console.WriteLine(MsgInfoSim, llistaSimulacions[i].GetTipus(), llistaSimulacions[i].GetEnergia(), llistaSimulacions[i].GetData());
                             }

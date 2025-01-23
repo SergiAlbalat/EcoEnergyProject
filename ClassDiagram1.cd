@@ -3,12 +3,12 @@
   <Class Name="EcoEnergyProject.SistemaEnergia">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABgQEAAAAAIAAAAAAAAAAAAgABCAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABgQEAQAAAIAAAAAAAAAAAAgABCAAgAAAAAAAAA=</HashCode>
       <FileName>SistemaEnergia.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EcoEnergyProject.SistemaSolar">
-    <Position X="3.75" Y="5.25" Width="1.5" />
+    <Position X="3.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ECEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SistemaSolar.cs</FileName>
@@ -16,7 +16,7 @@
     <Lollipop Orientation="Left" Position="0.1" />
   </Class>
   <Class Name="EcoEnergyProject.SistemaEolic">
-    <Position X="6.25" Y="5.25" Width="1.5" />
+    <Position X="6.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SistemaEolic.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Orientation="Left" Position="0.144" />
   </Class>
   <Class Name="EcoEnergyProject.SistemaHidroelectric">
-    <Position X="8.75" Y="5.25" Width="1.5" />
+    <Position X="8.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>SistemaHidroelectric.cs</FileName>
@@ -32,7 +32,7 @@
     <Lollipop Orientation="Left" Position="0.185" />
   </Class>
   <Interface Name="EcoEnergyProject.ICalculEnergia">
-    <Position X="8.75" Y="2.75" Width="1.5" />
+    <Position X="8.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICalculEnergia.cs</FileName>

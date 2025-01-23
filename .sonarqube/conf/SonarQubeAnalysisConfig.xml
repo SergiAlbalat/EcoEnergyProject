@@ -9,7 +9,7 @@
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://127.0.0.1:9000</SonarQubeHostUrl>
   <SonarQubeVersion>10.7.0.96327</SonarQubeVersion>
-  <SonarProjectKey>EcoEnergyProject</SonarProjectKey>
+  <SonarProjectKey>EcoEnergyProjectV2</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
@@ -138,8 +138,8 @@
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
-    <Property Name="sonar.core.startTime">23/01/2025 13:44:30</Property>
     <Property Name="sonar.core.id">147B411E-AZSTMV1iDOqg37NLwJAg</Property>
+    <Property Name="sonar.core.startTime">23/01/2025 17:56:28</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://127.0.0.1:9000</Property>
